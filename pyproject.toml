@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77,<81"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lfs-postal"
+version = "1.0.0"
+description = "A Django app for l10n of postal addresses."
+readme = "README.rst"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Michael Thornhill" }]
+maintainers = [{ name = "Kai Diefenbach" }]
+keywords = ["django", "postal", "address"]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 5.2",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.12"
+dependencies = [
+    "Django>=5.2,<6",
+    "django-countries>=9.1,<10",
+    "django-localflavor>=5.1,<6",
+]
+
+[project.urls]
+Source = "https://github.com/diefenbach/django-postal"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["postal*"]
